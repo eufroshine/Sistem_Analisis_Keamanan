@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Analisis Keamanan Real-time</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Analisis Keamanan Real-time</h1>
+            <div class="connection-status">
+                <span id="status-indicator"></span>
+                <span id="status-text">Menghubungkan...</span>
+            </div>
+        </header>
+        
+        <div class="dashboard">
+            <div class="stats-panel">
+                <div class="stat-box">
+                    <h3>Total Serangan</h3>
+                    <p id="total-attacks">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Serangan per Menit</h3>
+                    <p id="attacks-per-minute">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Tingkat Keparahan</h3>
+                    <p id="severity-level">Rendah</p>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="attack-chart"></canvas>
+            </div>
+            
+            <div class="logs-panel">
+                <h2>Log Serangan Terbaru</h2>
+                <div class="filter-controls">
+                    <select id="severity-filter">
+                        <option value="all">Semua Tingkat</option>
+                        <option value="low">Rendah</option>
+                        <option value="medium">Sedang</option>
+                        <option value="high">Tinggi</option>
+                        <option value="critical">Kritis</option>
+                    </select>
+                    <select id="attack-type-filter">
+                        <option value="all">Semua Tipe</option>
+                        <option value="sql">SQL Injection</option>
+                        <option value="xss">XSS</option>
+                        <option value="dos">DoS</option>
+                        <option value="brute">Brute Force</option>
+                    </select>
+                    <button id="clear-logs">Bersihkan Log</button>
+                </div>
+                <div class="log-entries" id="log-container">
+                    <!-- Log entries will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="wasm-module.js"></script>
+    <script src="websocket.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
