@@ -40,8 +40,8 @@ Sistem ini dirancang untuk:
 
 1. Clone repository ini
 ```bash
-git clone https://github.com/yourusername/security-analysis-realtime.git
-cd security-analysis-realtime
+git clone https://github.com/eufroshine/Sistem_Analisis_Keamanan.git
+cd Sistem_Analisis_Keamanan
 ```
 
 2. Install dependencies
@@ -205,5 +205,5 @@ Untuk memasukkan data serangan keamanan nyata:
 ## 📞 Kontak
 
 Jika Anda memiliki pertanyaan atau ingin berkolaborasi, silakan hubungi saya melalui:
-- Email: [Email Anda]
-- LinkedIn: [LinkedIn Anda]
+- Email: abidzarsabil03@gmail.com
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abidzar-sabil-21a406305/)
