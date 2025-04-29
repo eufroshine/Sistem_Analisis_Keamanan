@@ -95,15 +95,7 @@ http://localhost:8080
 
 ### Screenshots
 
-[Tambahkan screenshot aplikasi di sini]
-
-### Diagram Arsitektur
-
-[Tambahkan diagram arsitektur sistem di sini]
-
-### Demo Video
-
-[Tambahkan link ke video demo di sini]
+[Tambahkan s![{1B5FEF1C-88C8-4483-BE75-817A877E9CAE}](https://github.com/user-attachments/assets/a807716b-33a4-4aff-b032-a32b813fbdaf)
 
 ## 📝 Artikel Terkait
 
