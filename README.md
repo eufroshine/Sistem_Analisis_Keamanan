@@ -1,32 +1,37 @@
+# Sistem Analisis Keamanan Real-time dengan WebSocket dan WebAssembly
+
 | Nama               | NIM          |
 |--------------------|--------------|
-| Abidzar Sabil Handoyo        | 312310471   |
-
-# Sistem Analisis Keamanan Real-time
-
-Repository ini berisi implementasi dari Sistem Analisis Keamanan Real-time yang menggabungkan teknologi WebSocket dan WebAssembly untuk pemantauan keamanan yang lebih efisien dan cepat.
+| Abidzar Sabil Handoyo | 312310471   |
 
 ## 📝 Deskripsi
+
+Sistem ini menyediakan platform analisis keamanan real-time dengan menggabungkan teknologi WebSocket untuk komunikasi dua arah dan WebAssembly untuk pemrosesan data performa tinggi.
 
 Proyek ini merupakan implementasi dari artikel yang saya tulis di Medium berjudul [Membangun Sistem Analisis Keamanan Real-time: Menggabungkan WebSocket dan WebAssembly untuk Pemantauan Keamanan yang Lebih Efisien](https://medium.com/@abidzarsabil05/membangun-sistem-analisis-keamanan-real-time-menggabungkan-websocket-dan-webassembly-untuk-3e113925ed23).
 
 > **Catatan**: Saat ini sistem menggunakan data dummy (simulasi) untuk demonstrasi konsep. Instruksi untuk mengintegrasikannya dengan data keamanan sebenarnya disediakan di bagian "Catatan Implementasi".
 
-Sistem ini dirancang untuk:
-- Memantau serangan keamanan secara real-time
-- Menganalisis berbagai jenis serangan (SQL Injection, XSS, DoS, dll.)
-- Memberikan visualisasi data serangan
-- Menggunakan WebAssembly untuk analisis yang cepat dan efisien
-- Menerapkan WebSocket untuk komunikasi real-time
-
 ## 🚀 Fitur Utama
 
+- **Komunikasi real-time** menggunakan WebSocket
+- **Analisis serangan performa tinggi** dengan WebAssembly
+- **Dashboard interaktif** untuk monitoring serangan
+- **Filter dan visualisasi serangan** dengan berbagai jenis chart
+- **Simulasi serangan** untuk pengujian
 - **Pemantauan Real-time**: Melacak dan menampilkan serangan keamanan secara instan
 - **Analisis Berbasis WebAssembly**: Memanfaatkan performa tinggi dari WebAssembly untuk analisis serangan
-- **Visualisasi Data**: Chart dan statistik yang menampilkan tren serangan
 - **Multi-bahasa**: Antarmuka tersedia dalam Bahasa Indonesia
-- **Filter Log**: Memungkinkan penyaringan log berdasarkan jenis serangan dan tingkat keparahan
 - **Rekomendasi Respons**: Memberikan saran tindakan berdasarkan analisis serangan
+
+## 🔧 Komponen Sistem
+
+Sistem ini terdiri dari beberapa komponen utama:
+
+1. **Frontend**: Antarmuka pengguna berbasis web untuk menampilkan data keamanan
+2. **Backend WebSocket**: Server untuk komunikasi real-time
+3. **Modul WebAssembly**: Modul analisis keamanan berkecepatan tinggi
+4. **Dashboard**: Visualisasi data dan log serangan
 
 ## 🛠️ Teknologi yang Digunakan
 
@@ -37,6 +42,13 @@ Sistem ini dirancang untuk:
 - HTML/CSS/JavaScript Vanilla
 
 ## ⚙️ Cara Menginstal dan Menjalankan
+
+### Prasyarat
+
+- Node.js dan npm
+- Browser web modern dengan dukungan WebSocket dan WebAssembly
+
+### Langkah-langkah
 
 1. Clone repository ini
 ```bash
@@ -49,7 +61,7 @@ cd Sistem_Analisis_Keamanan
 npm install
 ```
 
-3. Kompilasi file WebAssembly (optional - saat ini menggunakan simulasi JavaScript)
+3. Kompilasi file WebAssembly
 ```bash
 # Menggunakan wabt (WebAssembly Binary Toolkit)
 wat2wasm security_analysis.wat -o security_analysis.wasm
@@ -61,14 +73,25 @@ wat-wasm security_analysis.wat -o security_analysis.wasm
 
 4. Jalankan server
 ```bash
-npm start
+node server.js
 ```
 
-5. Buka browser dan akses `http://localhost:8080`
+5. Buka aplikasi di browser
+```
+http://localhost:8080
+```
+
+## 📂 Struktur File
+
+- **index.html**: Halaman utama aplikasi
+- **styles.css**: Styling untuk antarmuka
+- **app.js**: Logika utama aplikasi
+- **websocket.js**: Menangani koneksi WebSocket
+- **wasm-module.js**: Integrasi dengan modul WebAssembly
+- **security_analysis.wat**: Kode WebAssembly dalam format Text
+- **server.js**: Server WebSocket untuk komunikasi real-time
 
 ## 📊 Dokumentasi
-
-[Bagian ini bisa diisi dengan dokumentasi tambahan, seperti screenshot, diagram, atau link ke dokumentasi eksternal]
 
 ### Screenshots
 
@@ -86,10 +109,6 @@ npm start
 
 Untuk penjelasan lebih detail tentang implementasi dan konsep di balik sistem ini, silakan baca artikel Medium saya:
 - [Membangun Sistem Analisis Keamanan Real-time: Menggabungkan WebSocket dan WebAssembly untuk Pemantauan Keamanan yang Lebih Efisien](https://medium.com/@abidzarsabil05/membangun-sistem-analisis-keamanan-real-time-menggabungkan-websocket-dan-webassembly-untuk-3e113925ed23)
-
-## 📜 Lisensi
-
-[MIT License](LICENSE)
 
 ## 💻 Catatan Implementasi
 
@@ -202,8 +221,32 @@ Untuk memasukkan data serangan keamanan nyata:
 2. Sesuaikan struktur pesan WebSocket dengan format data keamanan Anda
 3. Terapkan logika deteksi pola nyata dalam file WebAssembly atau dalam modul JavaScript terpisah
 
+## 🔮 Pengembangan Lebih Lanjut
+
+Sistem ini adalah versi dasar yang dapat dikembangkan lebih lanjut dengan:
+
+1. Integrasi dengan sumber log keamanan nyata
+2. Pengembangan algoritma analisis ancaman yang lebih canggih
+3. Penambahan fitur notifikasi dan peringatan
+4. Implementasi machine learning untuk deteksi anomali
+5. Penambahan visualisasi data yang lebih kompleks
+
+## 🔒 Penggunaan dalam Produksi
+
+Untuk penggunaan dalam lingkungan produksi, pertimbangkan untuk:
+
+1. Menambahkan autentikasi dan otorisasi
+2. Mengimplementasikan enkripsi untuk komunikasi WebSocket (WSS)
+3. Meningkatkan ketahanan dan kemampuan pemulihan server
+4. Menambahkan kemampuan penyimpanan dan analisis historis
+5. Mengintegrasikan dengan sistem keamanan yang ada
+
+## 📜 Lisensi
+
+[MIT License](LICENSE)
+
 ## 📞 Kontak
 
 Jika Anda memiliki pertanyaan atau ingin berkolaborasi, silakan hubungi saya melalui:
 - Email: abidzarsabil03@gmail.com
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abidzar-sabil-21a406305/)
+- LinkedIn: [Abidzar Sabil](https://www.linkedin.com/in/abidzar-sabil-21a406305/)
